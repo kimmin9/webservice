@@ -1,0 +1,8 @@
+### 직접 JSON 사용
+POST http://localhost:8080/posts
+Content-Type: application/json
+
+< ./posts.json
+
+###
+
