@@ -1,1 +1,6 @@
-rootProject.name = 'kmg'
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+}
+rootProject.name = 'webservice'

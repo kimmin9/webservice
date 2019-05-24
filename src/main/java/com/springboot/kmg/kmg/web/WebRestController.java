@@ -19,22 +19,22 @@ public class WebRestController {
     private EmailService emailService;
 
     @GetMapping("/hello")
-    public String hello(){
+    public String hello() {
         return "Helloworld1";
     }
 
     @PostMapping("/posts")
-    public Long savePosts(@RequestBody PostsSaveRequestDto dto){
+    public Long savePosts(@RequestBody PostsSaveRequestDto dto) {
         return postsService.save(dto);
     }
 
     @PostMapping("/email")
-    public int email(@RequestBody EmailDto dto){
+    public int email(@RequestBody EmailDto dto) {
 
         try {
             emailService.emailSend(dto);
             return 1;
-        }catch (MailException mailException){
+        } catch (MailException mailException) {
             return 0;
         }
     }

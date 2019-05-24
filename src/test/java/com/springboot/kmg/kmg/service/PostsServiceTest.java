@@ -23,12 +23,12 @@ public class PostsServiceTest {
     private PostsRepository postsRepository;
 
     @After
-    public void cleanup(){
+    public void cleanup() {
         postsRepository.deleteAll();
     }
 
     @Test
-    public void Dto가_Posts테이블에_저자된다 () {
+    public void Dto가_Posts테이블에_저자된다() {
         //given
         PostsSaveRequestDto dto = PostsSaveRequestDto.builder()
                 .author("jojoldu@gmail.com")
@@ -43,7 +43,6 @@ public class PostsServiceTest {
         assertThat(posts.getAuthor()).isEqualTo(dto.getAuthor());
         assertThat(posts.getContent()).isEqualTo(dto.getContent());
         assertThat(posts.getTitle()).isEqualTo(dto.getTitle());
-
 
 
     }
